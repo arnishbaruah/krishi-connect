@@ -1,0 +1,83 @@
+:root {
+
+    /* Font Size */
+    --title: 1.5rem;
+
+    /* Fonts */
+    --Poppins: 'Poppins', sans-serif;
+    --Josefin: 'Josefin Sans', sans-serif;
+
+    /* Background Colors */
+    --lightGreenbg: #Def2e6; /* apple green */
+    --biancabg: linear-gradient(0deg, rgba(207,245,181,1) 0%, rgba(247,250,245,1) 80%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%); /* Bianca */
+    --mediumGreenbg: #c4dacc;
+    
+     /* font Colors */
+     --darkGreenText:#1b5749; /* Dark green and also use for button color */
+     --lightGreenText: #5e8d7f; /*light green  */
+ 
+
+
+
+    /* font size  */
+    --font-size-small: 9px;
+    --font-size-normal: 18px;
+    --font-size-medium: 22px;
+    --font-size-lg: 28px;
+    --font-size-heading : 36px;
+ 
+
+}  
+
+.font-size-lg{
+font-size: large;
+}
+.lightGreenbg{
+    background-color: #Def2e6;
+}
+
+.biancabg {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(196,218,204,1) 0%, rgba(113,226,175,1) 64%, rgba(99,232,127,1) 100%, rgba(0,0,0,1) 100%, rgba(0,212,255,1) 100%);    
+}
+
+.mediumGreenbg{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(196,218,204,1) 0%, rgba(111,234,170,1) 0%, rgba(139,239,188,1) 0%, rgba(118,255,185,1) 0%, rgba(137,244,190,1) 0%, rgba(142,239,191,1) 0%, rgba(172,229,201,1) 11%, rgba(146,235,191,1) 19%, rgba(150,232,191,1) 21%, rgba(161,221,192,1) 27%, rgba(160,223,193,1) 32%, rgba(158,226,194,1) 40%, rgba(154,233,197,1) 57%, rgba(136,234,190,1) 84%, rgba(152,235,192,1) 100%, rgba(108,228,156,1) 100%, rgba(105,229,147,1) 100%, rgba(99,232,127,1) 100%, rgba(0,0,0,1) 100%, rgba(0,212,255,1) 100%);   
+    color: white;
+
+}
+.darkGreenbg{
+    /* background-color:#5e8d7f;   */
+    background-color:#1c8c59; 
+    color: white;
+    
+    
+    /* // #1b5749; */
+}
+.darkGreenText{
+    color: #1b5749;
+    
+}
+
+.lightGreenText{
+    color: #56b89b;
+}
+.mediumGreenText{
+    color: #1c8c59;
+    font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .custumShadow{
+    box-shadow: 0 4px 4px rgba(1, 1, 1, 0.2); /* Example shadow style */
+    border-radius: 8px;
+    border: none;
+    border-bottom: #1c8c59;
+  }
+
+  .inputField:focus{
+outline: none;
+  }

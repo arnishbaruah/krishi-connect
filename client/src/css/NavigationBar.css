@@ -1,0 +1,77 @@
+.nav-item{
+    padding-right: 20px;
+    
+}
+.nav-item{
+    margin-right: 5px;
+    cursor: pointer;
+   
+}
+
+.navbar-brand{
+   
+    cursor: pointer;
+}
+
+/* src/App.css or your custom CSS file */
+.navLink {
+    text-decoration: none; /* Remove default underline */
+     color: #1c8c59;
+     font-weight: 600;
+     font-size: 18px;
+    position: relative; /* Create a stacking context for the ::after pseudo-element */
+    transition: color 0.3s; /* Smooth color transition on hover */
+  }
+  
+  .navLink::after {
+    text-decoration: none;
+    content: ''; /* Create an empty pseudo-element */
+    position: absolute; /* Position it absolutely within the link */
+    bottom: -6px; /* Push it below the text */
+    left: 0; /* Position it at the start of the link */
+    width: 100%; /* Make it span the entire width of the link */
+    height: 2px; /* Set the height of the underline */
+    background-color: #1b5749; /* Set the underline color */
+    transform: scaleX(0); /* Initially, make the underline invisible */
+    transform-origin: center; /* Center the transform origin */
+    transition: transform 0.3s; /* Smooth scaling effect */
+    color: #1c8c59;
+  }
+  
+  .navLink:hover {
+    color: #1b5749; /* Change link color on hover */
+    text-decoration: none;
+  }
+  
+  .navLink:hover::after {
+    transform: scaleX(1); /* Scale the underline to full width on hover */
+    color: #1c8c59;
+  }
+  
+
+  .tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    
+   
+   margin-top: 2px;
+    text-align: center;
+  
+  
+    position: absolute;
+    z-index: 1;
+    top: 100%; /* Position the tooltip above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }

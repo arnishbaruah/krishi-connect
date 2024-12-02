@@ -1,0 +1,133 @@
+
+.weatherContainer{
+  box-shadow: 0 2px 4px rgba(0, 0, 0.6, 0.10); /* Example shadow style */
+
+}
+.weatherContainer .main{
+    border-radius: 10px;
+}
+.serachInput{
+    padding: 8px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: inset;
+}
+
+.header {
+    display: flex; /* Use flexbox to arrange items horizontally */
+    align-items: center; /* Vertically align items to the center */
+    gap: 10px; /* Add some spacing between the input and button */
+  }
+  
+  .leftdiv{
+    /* background-color: #1214bfd4; */
+
+    display: flex; 
+    justify-content: center;
+     width: 100%;
+    align-items: center;
+    border-radius: 10px solid white;
+  }
+
+  .weatherImg img{
+    height: 115px;
+    width: 115px;
+  }
+
+  .weatherImg ,.tempDetails{
+    display: flex;
+    justify-content: center;
+  }
+
+ .leftdiv .content{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Example shadow style */
+    border-radius: 8px;
+
+  }
+  .serachInput:focus {
+    outline: none;
+  }
+
+  .serachInput::placeholder {
+    color: #5e8d7f; /* Replace with your desired color value */
+  }
+
+
+
+  /* card css  */
+
+  /* .card{
+    padding: 1.2rem 3rem 1rem 3rem;
+    margin: 1rem;
+    border-radius: 1.5rem;
+    border-color: rgba(238, 237, 237, 0.438);
+    box-shadow: 5px 8px 10px #80808033;
+} */
+/* @media(max-width:767px){
+    .card{
+        height: 5rem;
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+    }
+} */
+.carousel-indicators li {
+    width: 5px;
+    height: 6px;
+    border-radius: 100%;
+    opacity: 0.2;
+    background-color: #000000;
+}
+.carousel-indicators{
+    margin-bottom: 0;
+}
+.temp{
+    font-size: 5rem;
+    color: rgb(57, 57, 58);
+}
+/* .card{ */
+    /* background: linear-gradient(to right, #ffffff 50%, rgba(203, 240, 200, 0.507)); */
+    /* box-shadow: 5px 8px 10px #c3f2c533; */
+    /* border-radius: 8px;
+
+} */
+
+
+/* dropdown css  */
+
+/* Style for the dropdown container */
+.dropdown-container {
+  width: 200px;
+  margin: 20px;
+
+}
+
+/* Style for the select element */
+.custom-select {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  text-align: center;
+}
+th{
+  color: white;
+  font-weight: bolder;
+}
+
+td{
+  font-weight: bold;
+  color: #5e8d7f;
+}
+
+.circular-button {
+  width: 40px; /* Set the width and height to the same value to make it circular */
+  height: 40px;
+  border-radius: 40%; /* Use border-radius to create a circular shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: transparent; If you want a transparent background */
+  border: none; /* If you want to remove the button border */
+  cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+  outline: none; /* Remove the default button focus outline */
+}

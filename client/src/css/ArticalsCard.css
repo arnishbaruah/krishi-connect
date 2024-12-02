@@ -1,0 +1,7 @@
+.sticky-button {
+    position: sticky;
+    top: 78px; /* Adjust this value as needed */
+    z-index: 100;
+    /* Set a background color if necessary */
+  }
+  
