@@ -20,7 +20,7 @@ function ScrollToTop() {
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
-   
+
   }, [pathname]);
 
   return null;
@@ -30,7 +30,7 @@ export default function App() {
   return (
     <>
     <BrowserRouter>
-    
+
     <ScrollToTop />
       <Routes>
       <Route path="/" element={<HomePage />} />
@@ -44,14 +44,14 @@ export default function App() {
 
 
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
        </BrowserRouter>
-       
+
     <div>
-     
-    
+
+
     </div>
-    
+
     </>
   )
 }

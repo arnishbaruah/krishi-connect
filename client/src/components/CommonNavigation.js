@@ -224,7 +224,7 @@ useEffect(()=>{
             smooth={true}
             duration={500}
           >
-            <span style={{ color: "Green" }}>Farmify</span>
+            <span style={{ color: "Green", fontSize:"xx-large" }}>Farmify</span>
           </RouterLink>
           <button
             className="navbar-toggler"
@@ -264,10 +264,10 @@ useEffect(()=>{
                   smooth={true}
                   duration={500}
                 >
-                  About
+                  Ecommerce
                 </RouterLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <RouterLink
                   className="navLink"
                   to="/"
@@ -276,7 +276,7 @@ useEffect(()=>{
                 >
                   Contact Us
                 </RouterLink>
-              </li>
+              </li> */}
             </ul>
           </div>
           {/* Button trigger modal  */}

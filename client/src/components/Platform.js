@@ -31,9 +31,9 @@ const url = `https://krishiconnect-ecommerce.cyclic.app/`
           </div>
         </div>
         <div className="row g-4" >
-          
+
           <div className="col-lg-4 col-md-6 mb-3  " style={{height:"300px"}}>
-          <Link to="/govschemes/home" style={{ textDecoration: 'none' }}> 
+          <Link to="/govschemes/home" style={{ textDecoration: 'none' }}>
             <div className="service cardGrid" >
               <img src={schmelogo} alt="abc" />
               <h5>Government Scheme </h5>
@@ -43,9 +43,9 @@ const url = `https://krishiconnect-ecommerce.cyclic.app/`
             </div>
             </Link>
           </div>
-          
+
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px"}}>
-          <Link to={url} style={{ textDecoration: 'none' }}> 
+          <Link to={url} style={{ textDecoration: 'none' }}>
             <div className="service cardGrid">
               <img src={logo} alt="" />
               <h5>Ecommerce</h5>
@@ -56,7 +56,7 @@ const url = `https://krishiconnect-ecommerce.cyclic.app/`
             </Link>
           </div>
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px"}}>
-          <Link to="/apmc/home" style={{ textDecoration: 'none' }}> 
+          <Link to="/apmc/home" style={{ textDecoration: 'none' }}>
             <div className="service cardGrid">
               <img src={product} alt="" />
               <h5>APMC Market </h5>
@@ -67,7 +67,7 @@ const url = `https://krishiconnect-ecommerce.cyclic.app/`
             </Link>
           </div>
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px"}}>
-          <Link to="/weather/home" style={{ textDecoration: 'none' }}> 
+          <Link to="/weather/home" style={{ textDecoration: 'none' }}>
             <div className="service cardGrid">
               <img src={weather} alt="" />
               <h5>Weather Updates</h5>
@@ -80,31 +80,31 @@ const url = `https://krishiconnect-ecommerce.cyclic.app/`
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px" }}>
           {
           localStorage.getItem("access_token")?(
-          <Link to="/community/home" style={{ textDecoration: 'none' }}> 
+          <Link to="/community/home" style={{ textDecoration: 'none' }}>
             <div className="service cardGrid">
               <img src={menlogo} alt="" />
               <h5>Community Support</h5>
               <p className=' lightGreenText'>
-              Community support for farmers to connect, share experiences, and seek expert advice.
+              For farmers to connect, share experiences, and seek expert advice.
               </p>
             </div>
-            </Link>):(<Link to="/" style={{ textDecoration: 'none' }}> 
+            </Link>):(<Link to="/" style={{ textDecoration: 'none' }}>
             <div className="service cardGrid">
               <img src={menlogo} alt="" />
               <h5>Community Support</h5>
               <p className=' lightGreenText'>
-              Community support for farmers to connect, share experiences, and seek expert advice.
+              For farmers to connect, share experiences, and seek expert advice.
               </p>
             </div>
             </Link>) }
           </div>
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px"}}>
-          <Link to="/articals/home" style={{ textDecoration: 'none' }}> 
+          <Link to="/articals/home" style={{ textDecoration: 'none' }}>
             <div className="service cardGrid " >
               <img src={men} alt="" />
               <h5>Informative articles</h5>
               <p className=' lightGreenText'>
-              Informative articles covering a wide range of agricultural topics for knowledge enhancement.
+              Covering a wide range of agricultural topics for knowledge enhancement.
               </p>
             </div>
             </Link>

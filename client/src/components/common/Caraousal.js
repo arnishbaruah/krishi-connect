@@ -17,8 +17,8 @@ export default function Caraousal() {
     <div class="carousel-item active">
         <div className="row">
             <div className="col-md-6 p-5 text-center leftContainer d-flex flex-column align-items-center justify-content-center " style={{height:"500px"}}>
-             <h4 className='p-2 darkGreenText'> "Nurturing India's Growth, One Crop at a Time." </h4>
-             <span className='p-2 '> 
+             <h4 className='p-2 darkGreenText'> "Empowering farmers, bridging markets, and cultivating connections for a sustainable future." </h4>
+             <span className='p-2 '>
              "The ultimate goal of farming is not the growing of crops, but the cultivation and perfection of human beings."
              </span>
              <div className="d-flex p-1 mt-2 ">
@@ -37,7 +37,7 @@ export default function Caraousal() {
     <div className="row">
             <div className="col-md-6 p-5 text-center leftContainer d-flex flex-column align-items-center justify-content-center " style={{height:"500px"}}>
              <h4 className='p-2 darkGreenText'> "Farming is a profession of hope." </h4>
-             <span className='p-2 '> 
+             <span className='p-2 '>
              "Agriculture is the most healthful, most useful, and most noble employment of man."
              </span>
              <div className="d-flex p-1 mt-2 ">
@@ -57,7 +57,7 @@ export default function Caraousal() {
     <div className="row">
             <div className="col-md-6 p-5 text-center leftContainer d-flex flex-column align-items-center justify-content-center " style={{height:"500px"}}>
              <h4 className='p-2 darkGreenText'> "The glory of farming is that it has the power to take the ordinary and turn it into something extraordinary." </h4>
-             <span className='p-2 '> 
+             <span className='p-2 '>
              "Agriculture is the most healthful, most useful, and most noble employment of man."
              </span>
              <div className="d-flex p-1 mt-2 ">

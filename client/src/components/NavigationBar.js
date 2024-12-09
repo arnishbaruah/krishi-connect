@@ -197,11 +197,11 @@ const [loading, setLoading] = useState(false);
 
   return (
     <>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top" style={{ padding: "0.1rem 0.1rem" }} >
       <div className="container">
 
         <Link to="/" className="navbar-brand navLink" style={{color:"#1b5749"}} smooth={true} duration={500}>
-        <span style={{color:"Green"}}>Farmify</span>
+        <span style={{color:"Green",fontSize:"xxx-large"}}>Farmify</span>
           </Link>
         <button
           className="navbar-toggler"
@@ -217,25 +217,30 @@ const [loading, setLoading] = useState(false);
         <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-            <Link className="navLink"  to="carouselExampleIndicators" smooth={true} duration={500}>
+            <Link className="navLink" style={{fontSize:"x-large"}} to="carouselExampleIndicators" smooth={true} duration={500}>
             Home
           </Link>
             </li>
             <li className="nav-item">
-            <Link className="navLink"  to="services" smooth={true} duration={500}>
+            <Link className="navLink" style={{fontSize:"x-large"}} to="services" smooth={true} duration={500}>
             Services
           </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
             <Link className="navLink" to="about" smooth={true} duration={500}>
             About
           </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
-            <Link className="navLink" to="contact" smooth={true} duration={500}>
-            Contact Us
+          <Link className="navLink" style={{fontSize:"x-large"}} to="services" smooth={true} duration={500}>
+            Ecommerce
          </Link>
             </li>
+            {/* <li className="nav-item">
+          <Link className="navLink" to="contact" smooth={true} duration={500}>
+            Contact Us
+         </Link>
+            </li> */}
           </ul>
         </div>
         {/* Button trigger modal  */}
@@ -264,9 +269,10 @@ const [loading, setLoading] = useState(false);
                   </div>
                 </div>
               </>
-            ) : (
-          <button className="btn darkGreenbg px-2 py-1" data-toggle="modal" data-target="#exampleModalCenter" style={{color:"white"}} >LogIn</button>
-
+            ) : (<>
+          <button className="btn darkGreenbg px-2 py-1" data-toggle="modal" data-target="#RegisterModel" style={{color:"white",fontSize:"x-large"}}>Register</button>
+          <button className="btn darkGreenbg mx-2 px-2 py-1" data-toggle="modal" data-target="#exampleModalCenter" style={{color:"white",fontSize:"x-large"}}>LogIn</button>
+          </>
             )}
       </div>
 
