@@ -38,7 +38,7 @@ const [loading, setLoading] = useState(false);
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
-  
+
 
     }));
   };
@@ -46,9 +46,9 @@ const [loading, setLoading] = useState(false);
   const onRegister = async (event) => {
     event.preventDefault();
     // setLoading(true);
-  
+
     try {
-      // send data to backend and store it in data 
+      // send data to backend and store it in data
       const data = await axios.post(
         "https://krushi-connect-backend.onrender.com/api/register",
         formData,
@@ -65,12 +65,12 @@ const [loading, setLoading] = useState(false);
         if (data.data.userStatus === "PENDING") {
           alert(data.data.message);
           // navigate(`/govschemes/home/${email}`)
-          
+
           openVerificationModel();
         }
       }
     } catch (error) {
-      
+
       // Handle registration error
       // setLoading(false);
       // if (error.response && error.response.status === 400) {
@@ -94,7 +94,7 @@ const [loading, setLoading] = useState(false);
   // Function to close the modal
 
   const closeModal = (data) => {
-   
+
     setIsModalOpen(false);
   };
 
@@ -104,7 +104,7 @@ const [loading, setLoading] = useState(false);
 
     // After data submission, open the modal
     openModal();
-  }; 
+  };
 
   // to set error if any eeror occurs
   const [error, setError] = useState('');
@@ -121,7 +121,7 @@ const [loading, setLoading] = useState(false);
       });
       console.log("data in navbar");
       RessetData(response.data);
-      
+
       await setUserContext(response.data);
       //  set loading false
       setLoading(false);
@@ -133,19 +133,19 @@ const [loading, setLoading] = useState(false);
     }
   };
 
-  // logout 
+  // logout
   const handleLogout = () => {
     // Clear the access_token from localStorage when logging out
     setLoading(true);
     localStorage.removeItem("access_token");
     // Redirect the user to the login page or home page after logout
     // You can add your own redirect logic based on your routes
-   
+
     setauth(false);
     setTimeout(() => {
       setLoading(false);
     }, 300);
-   
+
   };
 
   // to render Component
@@ -160,7 +160,7 @@ const [loading, setLoading] = useState(false);
     },
     [login] // add dependency when login set then online render componenet again and again
   );
-  // Send Login data To backend 
+  // Send Login data To backend
   const onLogin = async (event) => {
     event.preventDefault();
     setLoading(true);
@@ -176,7 +176,7 @@ const [loading, setLoading] = useState(false);
         const user = data.data;
         localStorage.setItem('access_token', user.token);
         setUserContext(data.data.user);
-       
+
       }
     } catch (error) {
       // Handle login error
@@ -193,15 +193,15 @@ const [loading, setLoading] = useState(false);
       }
     }
   };
- 
+
 
   return (
     <>
     <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className="container">
-       
+
         <Link to="/" className="navbar-brand navLink" style={{color:"#1b5749"}} smooth={true} duration={500}>
-        <span style={{color:"Green"}}>Krishi</span>Connect.
+        <span style={{color:"Green"}}>Farmify</span>
           </Link>
         <button
           className="navbar-toggler"
@@ -266,10 +266,10 @@ const [loading, setLoading] = useState(false);
               </>
             ) : (
           <button className="btn darkGreenbg px-2 py-1" data-toggle="modal" data-target="#exampleModalCenter" style={{color:"white"}} >LogIn</button>
-              
+
             )}
       </div>
-      
+
     </nav>
 
 {/* LogIn model  */}
@@ -312,7 +312,7 @@ const [loading, setLoading] = useState(false);
                   >
                     Login
                   </button>
-                 
+
                 </div>
               </div>
               <div class="modal-footer d-flex justify-content-between">
@@ -323,7 +323,7 @@ const [loading, setLoading] = useState(false);
         <button type="button" class="btn btn-outline-success w-100"  data-toggle="modal" data-target="#RegisterModel" data-dismiss="modal" >Register</button>
     </div>
     </div>
-    
+
   </div>
 </div>
 </div>
@@ -339,7 +339,7 @@ const [loading, setLoading] = useState(false);
       </button>
     </div>
     <div class="modal-body">
-      
+
     <div className="mb-3">
                   <label className="form-label mediumGreenText">Full Name</label>
                   <input
@@ -414,7 +414,7 @@ const [loading, setLoading] = useState(false);
                   >
                     Register
                   </button>
-                 
+
                 </div>
               </div>
               <div class="modal-footer d-flex justify-content-between">
@@ -428,8 +428,8 @@ const [loading, setLoading] = useState(false);
   </div>
 </div>
 </div>
-    
-   
+
+
 {/* verification model  */}
 {isModalOpen && (
 <OtpVerification email = {email}  onChildData = {closeModal} />
@@ -437,7 +437,7 @@ const [loading, setLoading] = useState(false);
 
 
     </>
-    
+
   );
 };
 

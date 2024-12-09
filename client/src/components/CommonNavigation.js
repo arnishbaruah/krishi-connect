@@ -35,7 +35,7 @@ useEffect(()=>{
     setLoading(false);
 
   }
-  
+
 },[details])
 
 // to run loading component
@@ -50,7 +50,7 @@ useEffect(()=>{
   //   setFormData((prevFormData) => ({
   //     ...prevFormData,
   //     [name]: value,
-  
+
 
   //   }));
   // };
@@ -58,9 +58,9 @@ useEffect(()=>{
   // const onRegister = async (event) => {
   //   event.preventDefault();
   //   // setLoading(true);
-  
+
   //   try {
-  //     // send data to backend and store it in data 
+  //     // send data to backend and store it in data
   //     const data = await axios.post(
   //       "http://localhost:8800/api/register",
   //       formData,
@@ -77,12 +77,12 @@ useEffect(()=>{
   //       if (data.data.userStatus === "PENDING") {
   //         alert(data.data.message);
   //         // navigate(`/govschemes/home/${email}`)
-          
+
   //         openVerificationModel();
   //       }
   //     }
   //   } catch (error) {
-      
+
   //     // Handle registration error
   //     // setLoading(false);
   //     // if (error.response && error.response.status === 400) {
@@ -106,7 +106,7 @@ useEffect(()=>{
   // Function to close the modal
 
   // const closeModal = (data) => {
-   
+
   //   setIsModalOpen(false);
   // };
 
@@ -116,7 +116,7 @@ useEffect(()=>{
 
   //   // After data submission, open the modal
   //   openModal();
-  // }; 
+  // };
 
   // to set error if any eeror occurs
   const [error, setError] = useState('');
@@ -133,7 +133,7 @@ useEffect(()=>{
   //     });
   //     console.log("data in navbar");
   //     RessetData(response.data);
-      
+
   //     setUserContext(response.data);
   //     //  set loading false
   //     setLoading(false);
@@ -145,7 +145,7 @@ useEffect(()=>{
   //   }
   // };
 
-  // logout 
+  // logout
   const handleLogout = () => {
     // Clear the access_token from localStorage when logging out
     setLoading(true);
@@ -153,12 +153,12 @@ useEffect(()=>{
     setDetails(null)
     // Redirect the user to the login page or home page after logout
     // You can add your own redirect logic based on your routes
-   
+
     setauth(false);
     setTimeout(() => {
       setLoading(false);
     }, 300);
-   
+
   };
 
   // to render Component
@@ -173,7 +173,7 @@ useEffect(()=>{
   //   },
   //   [login] // add dependency when login set then online render componenet again and again
   // );
-  // Send Login data To backend 
+  // Send Login data To backend
   // const onLogin = async (event) => {
   //   event.preventDefault();
   //   setLoading(true);
@@ -189,7 +189,7 @@ useEffect(()=>{
   //       const user = data.data;
   //       localStorage.setItem('access_token', user.token);
   //       setUserContext(data.data.user);
-       
+
   //     }
   //   } catch (error) {
   //     // Handle login error
@@ -211,7 +211,7 @@ useEffect(()=>{
     alert("Now You Can Login Here")
     navigate('/')
   }
- 
+
 
   return (
     <>
@@ -224,7 +224,7 @@ useEffect(()=>{
             smooth={true}
             duration={500}
           >
-            <span style={{ color: "Green" }}>Krishi</span>Connect.
+            <span style={{ color: "Green" }}>Farmify</span>
           </RouterLink>
           <button
             className="navbar-toggler"
@@ -360,7 +360,7 @@ useEffect(()=>{
                   >
                     Login
                   </button>
-                 
+
                 </div>
               </div>
               <div class="modal-footer d-flex justify-content-between">
@@ -371,7 +371,7 @@ useEffect(()=>{
         <button type="button" class="btn btn-outline-success w-100"  data-toggle="modal" data-target="#RegisterModel" data-dismiss="modal" >Register</button>
     </div>
     </div>
-    
+
   </div>
 </div>
 </div> */}
@@ -387,7 +387,7 @@ useEffect(()=>{
       </button>
     </div>
     <div class="modal-body">
-      
+
     <div className="mb-3">
                   <label className="form-label mediumGreenText">Full Name</label>
                   <input
@@ -461,7 +461,7 @@ useEffect(()=>{
                   >
                     Register
                   </button>
-                 
+
                 </div>
               </div>
               <div class="modal-footer d-flex justify-content-between">
@@ -476,7 +476,7 @@ useEffect(()=>{
 </div>
 </div>
      */}
-   
+
 {/* verification model  */}
 {/* {isModalOpen && (
 <OtpVerification email = {email}  onChildData = {closeModal} />
@@ -484,7 +484,7 @@ useEffect(()=>{
 
 
     </>
-    
+
   );
 };
 
