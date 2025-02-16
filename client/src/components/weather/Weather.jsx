@@ -427,8 +427,20 @@ const Weather = () => {
   }
 
   const handleclick = () => {
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8fc7db9ef3e1a9c9d04ade2367f1651e`)
+    const apiKey = "8fc7db9ef3e1a9c9d04ade2367f1651e";
+    const trimmedCity = city.trim();
+  
+    if (!trimmedCity) {
+      alert("Please enter a city name.");
+      return;
+    }
+  
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(trimmedCity)}&appid=${apiKey}&units=metric&_=${Date.now()}`;
+  
+    axios
+      .get(url)
       .then((response) => {
+        console.log("API Response:", response.data); // Debug response
         setData({
           description: response.data.weather[0].description,
           temp: response.data.main.temp,
@@ -441,8 +453,23 @@ const Weather = () => {
           wind: response.data.wind.speed,
         });
         setTemp(true);
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.error("API Response Error:", error.response.data);
+          alert(`Error: ${error.response.data.message}`);
+        } else if (error.request) {
+          console.error("No response received:", error.request);
+          alert("Error: No response from the server.");
+        } else {
+          console.error("Error:", error.message);
+          alert("An error occurred while fetching weather data.");
+        }
       });
-  }
+  };
+  
+  
+  
 
   return (
     <div className="container mt-5" style={{ marginTop: "40px" }}>
@@ -484,7 +511,7 @@ const Weather = () => {
                 <div className="p-2">
                   <div className="temp d-flex justify-content-center p-1 ">
                     <h3 className="font-weight-bold darkGreenText">
-                      {Temp ? (data.temp - 273.15).toFixed(2) : null}°C
+                      {Temp ? (data.temp).toFixed(2) : null}°C
                     </h3>
                   </div>
                   <div className="temp d-flex justify-content-center  ">
@@ -503,7 +530,7 @@ const Weather = () => {
                     <div class="card-body">
                       <h6>Temp Min</h6>{" "}
                       <span className="text-success">
-                        {Temp ? (data.temp_min - 273.15).toFixed(2) : null} °C
+                        {Temp ? (data.temp_min).toFixed(2) : null} °C
                       </span>
                     </div>
                   </div>
@@ -514,7 +541,7 @@ const Weather = () => {
                     <div class="card-body ">
                       <h6>Temp Max </h6>
                       <span className="text-success">
-                        {Temp ? (data.temp_max - 273.15).toFixed(2) : null} °C
+                        {Temp ? (data.temp_max).toFixed(2) : null} °C
                       </span>
                     </div>
                   </div>
